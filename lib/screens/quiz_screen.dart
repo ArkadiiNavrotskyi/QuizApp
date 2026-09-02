@@ -32,7 +32,7 @@ class _QuizScreenState extends State<QuizScreen> {
   @override
   void initState() {
     super.initState();
-    questions = widget.category.questions;
+    questions = widget.category.questions.toList()..shuffle();
   }
 
 // checkAnswer checks if the selected answer is correct
